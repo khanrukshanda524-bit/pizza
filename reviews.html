@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza Paradise - Fresh Pasta</title>
+    <title>Pizza Paradise - Customer Reviews</title>
     <style>
         * {
             margin: 0;
@@ -125,61 +125,68 @@
             color: #faf8f3;
         }
 
-        /* Menu Section */
-        .menu-grid {
+        /* Reviews Section */
+        .reviews-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
 
-        .menu-item {
+        .review-card {
             background: white;
             border-radius: 15px;
-            overflow: hidden;
+            padding: 2rem;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .menu-item:hover {
+        .review-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
 
-        .menu-item-image {
-            height: 250px;
-            overflow: hidden;
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        .reviewer-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #d4a574 0%, #c23b22 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #252220;
-        }
-
-        .menu-item-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .menu-item-content {
-            padding: 1.5rem;
-        }
-
-        .menu-item h3 {
-            color: #3e2723;
-            margin-bottom: 0.5rem;
-            font-size: 1.5rem;
-        }
-
-        .menu-item p {
-            color: #666;
-            margin-bottom: 1rem;
-        }
-
-        .price {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #6b8e23;
+            color: white;
+        }
+
+        .reviewer-info h3 {
+            color: #3e2723;
+            margin-bottom: 0.2rem;
+            font-size: 1.2rem;
+        }
+
+        .rating {
+            color: #d4a574;
+            font-size: 1.2rem;
+        }
+
+        .review-text {
+            color: #666;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .review-date {
+            margin-top: 1rem;
+            color: #999;
+            font-size: 0.9rem;
         }
 
         /* Footer */
@@ -217,7 +224,7 @@
                 font-size: 1.2rem;
             }
 
-            .menu-grid {
+            .reviews-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -244,74 +251,85 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Fresh Homemade Pasta</h1>
-            <p>Traditional Italian Recipes</p>
+            <h1>Customer Reviews</h1>
+            <p>What Our Guests Say About Us</p>
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section id="menu">
-        <h2 class="section-title">Our Pasta Menu</h2>
-        <div class="menu-grid">
-            <div class="menu-item">
-                <div class="menu-item-image">
-                    <img src="assets/Spaghetti Carbonara.PNG" alt="Spaghetti Carbonara">
+    <!-- Reviews Section -->
+    <section id="reviews">
+        <h2 class="section-title">Testimonials</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">MJ</div>
+                    <div class="reviewer-info">
+                        <h3>Maria Johnson</h3>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
                 </div>
-                <div class="menu-item-content">
-                    <h3>Spaghetti Carbonara</h3>
-                    <p>Classic Roman pasta with eggs, pecorino cheese, guanciale, and black pepper</p>
-                    <div class="price">$13.99</div>
-                </div>
+                <p class="review-text">"Best pizza I've ever had! The Margherita was absolutely perfect - fresh basil, creamy mozzarella, and that wood-fired crust. Will definitely be coming back!"</p>
+                <p class="review-date">January 15, 2026</p>
             </div>
-            <div class="menu-item">
-                <div class="menu-item-image">
-                    <img src="assets/Fettuccine Alfredo.PNG" alt="Fettuccine Alfredo">
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">DS</div>
+                    <div class="reviewer-info">
+                        <h3>David Smith</h3>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
                 </div>
-                <div class="menu-item-content">
-                    <h3>Fettuccine Alfredo</h3>
-                    <p>Creamy parmesan sauce with butter over fresh fettuccine pasta</p>
-                    <div class="price">$14.99</div>
-                </div>
+                <p class="review-text">"The pasta here is incredible! Tried the Carbonara and it tasted just like my nonna used to make. Authentic Italian food at its finest."</p>
+                <p class="review-date">January 12, 2026</p>
             </div>
-            <div class="menu-item">
-                <div class="menu-item-image">
-                    <img src="assets/Penne Arrabbiata.PNG" alt="Penne Arrabbiata">
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">SL</div>
+                    <div class="reviewer-info">
+                        <h3>Sarah Lee</h3>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
                 </div>
-                <div class="menu-item-content">
-                    <h3>Penne Arrabbiata</h3>
-                    <p>Spicy tomato sauce with garlic, red chili peppers, and fresh basil</p>
-                    <div class="price">$12.99</div>
-                </div>
+                <p class="review-text">"Amazing atmosphere and even better food! The Supreme pizza is loaded with toppings and the service was outstanding. Highly recommend!"</p>
+                <p class="review-date">January 10, 2026</p>
             </div>
-            <div class="menu-item">
-                <div class="menu-item-image">
-                    <img src="assets/Lasagna Bolognese.PNG" alt="Lasagna Bolognese">
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">JW</div>
+                    <div class="reviewer-info">
+                        <h3>James Wilson</h3>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
                 </div>
-                <div class="menu-item-content">
-                    <h3>Lasagna Bolognese</h3>
-                    <p>Layers of pasta with rich meat sauce, béchamel, and mozzarella</p>
-                    <div class="price">$16.99</div>
-                </div>
+                <p class="review-text">"Five stars isn't enough! The quality of ingredients really shows. The pepperoni pizza was phenomenal and the house wine paired perfectly."</p>
+                <p class="review-date">January 8, 2026</p>
             </div>
-            <div class="menu-item">
-                <div class="menu-item-image">
-                    <img src="assets/Ravioli Ricotta e Spinaci.PNG" alt="Ravioli Ricotta e Spinaci">
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">EB</div>
+                    <div class="reviewer-info">
+                        <h3>Emily Brown</h3>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
                 </div>
-                <div class="menu-item-content">
-                    <h3>Ravioli Ricotta e Spinaci</h3>
-                    <p>Homemade ravioli filled with ricotta and spinach in sage butter sauce</p>
-                    <div class="price">$15.99</div>
-                </div>
+                <p class="review-text">"The vegetarian pizza exceeded all expectations! So many fresh vegetables and the flavor combinations were perfect. Can't wait to try more dishes!"</p>
+                <p class="review-date">January 5, 2026</p>
             </div>
-            <div class="menu-item">
-                <div class="menu-item-image">
-                    <img src="assets/Linguine alle Vongole.PNG" alt="Linguine alle Vongole">
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">RM</div>
+                    <div class="reviewer-info">
+                        <h3>Robert Martinez</h3>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
                 </div>
-                <div class="menu-item-content">
-                    <h3>Linguine alle Vongole</h3>
-                    <p>Fresh clams, white wine, garlic, parsley, and extra virgin olive oil</p>
-                    <div class="price">$17.99</div>
-                </div>
+                <p class="review-text">"Been coming here for years and it never disappoints. The Lasagna Bolognese is my go-to. Family-run quality you can taste in every bite!"</p>
+                <p class="review-date">January 2, 2026</p>
             </div>
         </div>
     </section>
@@ -319,7 +337,7 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Pizza Paradise. All rights reserved.</p>
-        <p>Made with ❤️ and 🍝</p>
+        <p>Made with ❤️ and 🍕</p>
     </footer>
 </body>
 </html>
